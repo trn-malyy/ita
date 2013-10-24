@@ -1,9 +1,9 @@
 # ========================================================================
 # Script 		=	__FILE__
 # ========================================================================
-# Description 	=	"This script is acception to argument from command line and puts it in to "
-# Name 			=	"Serhiy Malyy"
-# Email 		=	"ThisIsPublicGit@nobody.com"
+# Description 	=	"This is a description of the script"
+# Name 			=	"Your Name"
+# Email 		=	"your@email.com"
 # ========================================================================
 
 apple =  ARGV[0]
