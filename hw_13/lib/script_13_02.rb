@@ -1,12 +1,13 @@
 # ========================================================================
-# Script 		=	__FILE__
+# Script 		=	script_13_02.rb
 # ========================================================================
-# Description 	=	"This is a description of the script"
-# Name 			=	"Your Name"
-# Email 		=	"your@email.com"
+# Description 	=	"This script is accepting to arguments from command line and puts it in to "
+#                   "and puts then in to sentence where last chars in string are removed
+# Name 			=	"Serhiy Malyy"
+# Email 		=	"ThisIsPublicGit@nobody.com"
 # ========================================================================
 
-apple =  ARGV[0]
-banana = ARGV[1]
+arg01 = ARGV[0]
+arg02 = ARGV[1]
 
-puts "My favorite fruits are #{apple}s and #{banana}s"
+puts "My favorite fruit is #{arg01.chop} or #{arg02.chop}"
