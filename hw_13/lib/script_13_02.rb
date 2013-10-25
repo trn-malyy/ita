@@ -1,8 +1,8 @@
 # ========================================================================
 # Script 		=	script_13_02.rb
 # ========================================================================
-# Description 	=	"This script is accepting to arguments from command line and puts it in to "
-#                   "and puts then in to sentence where last chars in string are removed
+# Description 	=	'This script is accepting to arguments from command line and puts it in to 
+#                    and puts then in to sentence where last chars in string are removed'
 # Name 			=	"Serhiy Malyy"
 # Email 		=	"ThisIsPublicGit@nobody.com"
 # ========================================================================
