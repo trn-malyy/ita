@@ -1,0 +1,95 @@
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : AdminWin-PC
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : Belkin
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : 04-0C-CE-EE-52-3C
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter Local Area Connection 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Broadcom NetXtreme Gigabit Ethernet
+   Physical Address. . . . . . . . . : 3C-07-54-07-6D-EB
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Wireless Network Connection:
+
+   Connection-specific DNS Suffix  . : Belkin
+   Description . . . . . . . . . . . : Atheros AR938x Wireless Network Adapter
+   Physical Address. . . . . . . . . : E4-CE-8F-60-83-4B
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::541b:3a84:3040:889%11(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 10.33.0.32(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.0.0.0
+   Lease Obtained. . . . . . . . . . : Thursday, October 24, 2013 1:53:50 AM
+   Lease Expires . . . . . . . . . . : Tuesday, December 02, 2149 3:23:35 AM
+   Default Gateway . . . . . . . . . : 10.33.0.1
+   DHCP Server . . . . . . . . . . . : 10.33.0.1
+   DHCPv6 IAID . . . . . . . . . . . : 300207759
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-16-14-59-9C-00-1C-42-76-6C-D5
+   DNS Servers . . . . . . . . . . . : 8.8.8.8
+                                       8.8.4.4
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Tunnel adapter Local Area Connection* 13:
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2001:0:9d38:90d7:1448:116c:cd7c:9b6e(Preferred) 
+   Link-local IPv6 Address . . . . . : fe80::1448:116c:cd7c:9b6e%20(Preferred) 
+   Default Gateway . . . . . . . . . : ::
+   NetBIOS over Tcpip. . . . . . . . : Disabled
+
+Tunnel adapter isatap.Belkin:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : Belkin
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter 6TO4 Adapter:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft 6to4 Adapter
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.{6A45CF51-B741-41F3-A6D4-3C4A76022E05}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.{8C1FFA34-3C5B-49C7-9A5D-49B8AF10128A}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
