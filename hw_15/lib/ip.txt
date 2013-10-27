@@ -36,8 +36,8 @@ Wireless LAN adapter Wireless Network Connection:
    Link-local IPv6 Address . . . . . : fe80::541b:3a84:3040:889%11(Preferred) 
    IPv4 Address. . . . . . . . . . . : 10.33.0.32(Preferred) 
    Subnet Mask . . . . . . . . . . . : 255.0.0.0
-   Lease Obtained. . . . . . . . . . : Thursday, October 24, 2013 1:53:50 AM
-   Lease Expires . . . . . . . . . . : Tuesday, December 02, 2149 3:23:35 AM
+   Lease Obtained. . . . . . . . . . : Saturday, October 26, 2013 3:31:35 AM
+   Lease Expires . . . . . . . . . . : Wednesday, December 03, 2149 1:06:32 AM
    Default Gateway . . . . . . . . . : 10.33.0.1
    DHCP Server . . . . . . . . . . . : 10.33.0.1
    DHCPv6 IAID . . . . . . . . . . . : 300207759
@@ -53,8 +53,8 @@ Tunnel adapter Local Area Connection* 13:
    Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
    DHCP Enabled. . . . . . . . . . . : No
    Autoconfiguration Enabled . . . . : Yes
-   IPv6 Address. . . . . . . . . . . : 2001:0:9d38:90d7:1448:116c:cd7c:9b6e(Preferred) 
-   Link-local IPv6 Address . . . . . : fe80::1448:116c:cd7c:9b6e%20(Preferred) 
+   IPv6 Address. . . . . . . . . . . : 2001:0:9d38:6abd:1852:2b75:cd7c:9b6e(Preferred) 
+   Link-local IPv6 Address . . . . . : fe80::1852:2b75:cd7c:9b6e%20(Preferred) 
    Default Gateway . . . . . . . . . : ::
    NetBIOS over Tcpip. . . . . . . . : Disabled
 
