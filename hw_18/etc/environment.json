@@ -1,0 +1,4 @@
+{
+	"db_server" : "mysql",
+	"web_server" : 	"http://www.abc.com"
+}
