@@ -1,5 +1,5 @@
  # ========================================================================
- # Script     =  script_22_07.rb
+ # Script     =  script_21_06.rb
  # ========================================================================
  # Description   =  "The script in accepting path as an argument, reads through file 
  #                   collects numeric values and returns average numbers
@@ -7,34 +7,38 @@
  # Email         =  "ThisIsPublicGit@nobody.com"
  # ========================================================================
 require 'optparse'
-require 'csv'
+require 'json'
+sum = ""
+num = ""
+
  # OptionParser is a class for command-line option analysis
-OptionParser.new do |opts| # opts is var 
-  # Option one - File Path 
+ OptionParser.new do |opts| # opts is var 
+  # Option one 
 	opts.on("-i", "--input") do
 		$file_name = ARGV[0]  # <<- GLOBAL ($) VAR a
+		 #puts ARGV[0]
 	end 
-  # Option two - Row Number 	
-	opts.on("-r", "--row") do
-		$row_num = ARGV[0].to_i
-		#puts ARGV[0]
-	end
+ end.parse!
+ 
+  json_file = File.read($file_name)
+  #puts json_file #"Class Of JSON File.Read"
+  element = JSON.parse(json_file)
 
-end.parse!
-	sum = ""
-	$row_num = $row_num -1	
-	csv_file = CSV.read($file_name)
-	#puts csv_file[$row_num].class
+    script_name = __FILE__.split("/").to_a.last
+ #	puts script_name
+ #	puts element[script_name].class
+ # Convert  hash values to array 
+    my_vals = element[script_name].values.to_a
+  
 	# spin array to calculate the summary of all option	 
-	csv_file[$row_num].each do |z|
+	my_vals.each do |z|
 	   # puts z
 		sum = sum.to_f + z.to_f
+		#puts sum
 	end
  # Get the number of options 
-	 num = csv_file[$row_num].length
+	 num = my_vals.length
  # calculate the average number 
 	 everage = sum/num
-	 #puts everage
-	 #puts everage.class
  # print out the results 
-  puts "The everage of the following numbers is: #{csv_file[$row_num].join(", ")} is #{everage}"
+  puts "The everage of the following numbers is: #{my_vals.join(", ")} is #{everage}"

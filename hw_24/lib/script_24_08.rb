@@ -1,33 +1,34 @@
  # ========================================================================
- # Script     =  script_22_08.rb
+ # Script     =  script_24_08.rb
  # ========================================================================
  # Description   =  "The script in accepting path as an argument, reads through file 
- #                   trying to match First Last name pattern, script will returne mached First Last name to command line 
+ #                   collects line values and returns them sorted
  # Name          =  "Serhiy Malyy"
  # Email         =  "ThisIsPublicGit@nobody.com"
  # ========================================================================
 require 'optparse'
-require 'csv'
+require 'json'
 # First name last name reg EX
-reg_ex = /[A-Z][a-z]+\s[A-Z][a-z]+/
+reg_ex = /[A-Z][a-z]/
 
  # OptionParser is a class for command-line option analysis
-OptionParser.new do |opts| # opts is var 
-  # Option one - File Path 
+ OptionParser.new do |opts| # opts is var 
+  # Option one 
 	opts.on("-i", "--input") do
 		$file_name = ARGV[0]  # <<- GLOBAL ($) VAR a
+		 #puts ARGV[0]
 	end 
-  # Option two - Row Number 	
-	opts.on("-r", "--row") do
-		$row_num = ARGV[0].to_i
-		#puts ARGV[0]
-	end
+ end.parse!
+ 
+  json_file = File.read($file_name)
+  #puts json_file #"Class Of JSON File.Read"
+  element = JSON.parse(json_file)
 
-end.parse!
+ script_name = __FILE__.split("/").to_a.last
 
-	$row_num = $row_num -1	
-	csv_file = CSV.read($file_name)
-	#puts csv_file[$row_num]
-	name = csv_file[$row_num].join(" ")
+ my_file_lines = element[script_name].values.to_a
+ name = my_file_lines[0].match reg_ex
+ seasons = my_file_lines.sort.join(" ")
+  
 # return output to command line with mached first last names 
-puts "His name is : #{name.match reg_ex}"
+puts "Here are sorted (alphabetically) words: #{seasons} "

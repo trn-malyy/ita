@@ -1,14 +1,16 @@
  # ========================================================================
- # Script     =  script_24_04.rb
+ # Script     =  script_22_08.rb
  # ========================================================================
  # Description   =  "The script in accepting path as an argument, reads through file 
- #                   collects numeric values and returns in form of Ipv4.
+ #                   trying to match First Last name pattern, script will returne mached First Last name to command line 
  # Name          =  "Serhiy Malyy"
  # Email         =  "ThisIsPublicGit@nobody.com"
  # ========================================================================
 require 'optparse'
 require 'json'
-json_file = ""
+# First name last name reg EX
+reg_ex = /[A-Z][a-z]+\s[A-Z][a-z]+/
+
  # OptionParser is a class for command-line option analysis
  OptionParser.new do |opts| # opts is var 
   # Option one 
@@ -21,17 +23,13 @@ json_file = ""
   json_file = File.read($file_name)
   #puts json_file #"Class Of JSON File.Read"
   element = JSON.parse(json_file)
-	#puts element.values
-	#puts element.class
+
+    script_name = __FILE__.split("/").to_a.last
+ #	puts script_name
+ #	puts element[script_name].class
+ # Convert  hash values to array 
+    arr_name = element[script_name].values.to_a
   
-  #if RUBY_PLATFORM =~ /darwin/ then
-	   script_name = __FILE__.split("/").to_a.last
-   # else
-#for windows OS  assignemt was only supposed to be "script_name = __FILE__" but it returns partial path as well 
-      #script_name = __FILE__.split("/").to_a.last
-	   #puts script_name.class
-	   #puts script_name	
-  #end
- my_vals = element[script_name].values.to_a
- #return the output to command line 
- puts "My IP Address is: #{my_vals[0]}.#{my_vals[1]}.#{my_vals[2]}.#{my_vals[3]}" 
+	name = arr_name.join(" ")
+# return output to command line with mached first last names 
+puts "His name is : #{name.match reg_ex}"
