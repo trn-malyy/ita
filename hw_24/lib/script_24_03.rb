@@ -1,32 +1,39 @@
  # ========================================================================
- # Script     =  script_23_03.rb
+ # Script     =  script_22_03.rb
  # ========================================================================
- # Description   =  "The script in accepting path as an argument, reads through file 
+ # Description   =  "The script in accepting path as an argument, reads through csv file 
  #                   collects numeric value and divides one by another , then returns result .
  # Name          =  "Serhiy Malyy"
  # Email         =  "ThisIsPublicGit@nobody.com"
  # ========================================================================
 require 'optparse'
-require 'json'
-json_file = ""
+require 'csv'
  # OptionParser is a class for command-line option analysis
- OptionParser.new do |opts| # opts is var 
-  # Option one 
+OptionParser.new do |opts| # opts is var 
+  # Option one - File Path 
 	opts.on("-i", "--input") do
 		$file_name = ARGV[0]  # <<- GLOBAL ($) VAR a
-		 #puts ARGV[0]
 	end 
- end.parse!
- 
-	json_file = File.read($file_name)
-	#puts json_file #"Class Of JSON File.Read"
-	element = JSON.parse(json_file)
-	#puts element.class
+  # Option two - Row Number 	
+	opts.on("-r", "--row") do
+		$row_num = ARGV[0].to_i
+		#puts ARGV[0]
+	end
 
+end.parse!
+
+	$row_num = $row_num -1
+	
+	csv_file = CSV.read($file_name)
+
+    #	puts csv_file.class
+	#	puts csv_file.size
+	#	puts csv_file
  #  Note.chomp method = remove new line spaces 
-	num_one = element["int_a"]
-	num_two = element["int_b"]
+	num_one = csv_file[$row_num][0]
+	num_two = csv_file[$row_num][1]
 	sum = (num_one.to_i / num_two.to_i)
 	
  #return the output to command line 
  puts "When I am dividing #{num_one} by #{num_two} I am always have #{sum}"
+

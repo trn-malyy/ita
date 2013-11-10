@@ -1,0 +1,69 @@
+{
+"script_24_01.rb":
+                                    {
+                                    "fruit_a" : "apple",
+                                    "fruit_b" : "banana"
+                                    },
+"script_24_02.rb":
+                                    {
+                                    "fruits_a" : "apples",
+                                    "fruits_b" : "bananas"
+                                    },
+"script_24_03.rb":
+                                    {
+                                    "int_a" : "100",
+                                    "int_b" : "10"
+                                    },
+"script_24_04.rb":
+                                    {
+                                    "octet_1" : "66",
+                                    "octet_2" : "166",
+                                    "octet_3" : "202",
+                                    "octet_4" : "14"
+                                    },
+"script_24_05.rb":
+                                    {
+                                    "int_a" : "35",
+                                    "int_b" : "45",
+                                    "int_c" : "61",
+                                    "int_d" : "59",
+                                    "int_e" : "73"
+                                    },
+"script_24_06_A.rb":
+                                    {
+                                    "int_a" : "2",
+                                    "int_b" : "4",
+                                    "int_c" : "6",
+                                    "int_d" : "8",
+                                    "int_e" : "10",
+                                    "int_f" : "12"
+                                    },
+"script_24_06_B.rb":
+                                    {
+                                    "int_a" : "23",
+                                    "int_b" : "15",
+                                    "int_c" : "97",
+                                    "int_d" : "45",
+                                    "int_e" : "365",
+                                    "int_f" : "1234",
+                                    "int_g" : "523665",
+                                    "int_h" : "45",
+                                    "int_i" : "2971",
+                                    "int_j" : "22145"
+                                    },
+"script_24_07_A.rb":
+                                    {
+                        "sentence" : " Wednesday morning, John Smith was walking on the street."
+                                    },
+"script_24_07_B.rb":
+                                    {
+                        "sentence" : " Wednesday morning, John Smith was walking on the street."
+                                    },
+"script_24_08.rb":
+                                    {
+                                    "season_a" : "Spring",
+                                    "season_b" : "Summer",
+                                    "season_c" : "Fall",
+                                    "season_d" : "Winter"
+                                    }
+}

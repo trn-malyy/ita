@@ -1,7 +1,7 @@
  # ========================================================================
- # Script     =  script_23_02.rb
+ # Script     =  script_24_01.rb
  # ========================================================================
- # Description   =  "The script in accepting path argument , reads through JSON file 
+ # Description   =  "The script in accepting path argument , reads through file 
  #                   and returns line data.
  # Name          =  "Serhiy Malyy"
  # Email         =  "ThisIsPublicGit@nobody.com"
@@ -18,12 +18,24 @@ json_file = ""
 	end 
  end.parse!
  
-	json_file = File.read($file_name)
-	#puts json_file #"Class Of JSON File.Read"
-	element = JSON.parse(json_file)
-	#puts element[fruit_a]
+  json_file = File.read($file_name)
+  #puts json_file #"Class Of JSON File.Read"
+  element = JSON.parse(json_file)
+	#puts element.values
 	#puts element.class
+  
+  #if RUBY_PLATFORM =~ /darwin/ then
+	   script_name = __FILE__.split("/").to_a.last
+   # else
+#for windows OS  assignemt was only supposed to be "script_name = __FILE__" but it returns partial path as well 
+      #script_name = __FILE__.split("/").to_a.last
+	   #puts script_name.class
+	   #puts script_name	
+  #end
+ 
+ 
+	
 	
 
  #return the output to command line . Note.chomp method = remove new line spaces 
- puts "My favorite fruit is : #{element["fruits_a"].to_s.chop} or #{element["fruits_b"].to_s.chop}"
+ puts "My favorite fruits are: #{element[script_name]["fruit_a"]}s and #{element[script_name]["fruit_a"]}s"

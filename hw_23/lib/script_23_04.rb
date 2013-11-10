@@ -7,20 +7,21 @@
  # Email         =  "ThisIsPublicGit@nobody.com"
  # ========================================================================
 require 'optparse'
+require 'json'
+json_file = ""
  # OptionParser is a class for command-line option analysis
-OptionParser.new do |opts| # opts is var 
+ OptionParser.new do |opts| # opts is var 
   # Option one 
 	opts.on("-i", "--input") do
 		$file_name = ARGV[0]  # <<- GLOBAL ($) VAR a
-		#puts ARGV[0]
+		 #puts ARGV[0]
 	end 
-end.parse!
- # Empty array
-	my_file_lines = []
-	file = File.open($file_name, "r") # Arg "r" means read.
-	file.each_line do |var_line| #<== each_line in not as string , it a collection method
- # Push is an array method , could also be done this way : my_file_lines << var_line
-		my_file_lines.push var_line.chomp  #  Note.chomp method = remove new line spaces
-	end
+ end.parse!
+ 
+	json_file = File.read($file_name)
+	#puts json_file #"Class Of JSON File.Read"
+	element = JSON.parse(json_file)
+	#puts element.class
+
  #return the output to command line 
- puts "My IP Address is: #{my_file_lines[0]}.#{my_file_lines[1]}.#{my_file_lines[2]}.#{my_file_lines[3]}" 
+ puts "My IP Address is: #{element["octet_1"]}.#{element["octet_2"]}.#{element["octet_3"]}.#{element["octet_4"]}" 

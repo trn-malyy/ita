@@ -1,29 +1,35 @@
  # ========================================================================
- # Script     =  script_23_02.rb
+ # Script     =  script_22_02.rb
  # ========================================================================
- # Description   =  "The script in accepting path argument , reads through JSON file 
+ # Description   =  "The script in accepting path argument , reads through csv file 
  #                   and returns line data.
  # Name          =  "Serhiy Malyy"
  # Email         =  "ThisIsPublicGit@nobody.com"
  # ========================================================================
 require 'optparse'
-require 'json'
-json_file = ""
+require 'csv'
  # OptionParser is a class for command-line option analysis
- OptionParser.new do |opts| # opts is var 
-  # Option one 
+OptionParser.new do |opts| # opts is var 
+  # Option one - File Path 
 	opts.on("-i", "--input") do
 		$file_name = ARGV[0]  # <<- GLOBAL ($) VAR a
-		 #puts ARGV[0]
 	end 
- end.parse!
- 
-	json_file = File.read($file_name)
-	#puts json_file #"Class Of JSON File.Read"
-	element = JSON.parse(json_file)
-	#puts element[fruit_a]
-	#puts element.class
-	
+  # Option two - Row Number 	
+	opts.on("-r", "--row") do
+		$row_num = ARGV[0].to_i
+		#puts ARGV[0]
+	end
 
+
+end.parse!
+	
+	$row_num = $row_num -1
+	
+	csv_file = CSV.read($file_name)
+
+    #	puts csv_file.class
+	#	puts csv_file.size
+	#	puts csv_file
+	
  #return the output to command line . Note.chomp method = remove new line spaces 
- puts "My favorite fruit is : #{element["fruits_a"].to_s.chop} or #{element["fruits_b"].to_s.chop}"
+ puts "My favorite fruit is: #{csv_file[$row_num][0].chop} or  #{csv_file[$row_num][1].chop}"

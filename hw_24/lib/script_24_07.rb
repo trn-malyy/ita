@@ -1,5 +1,5 @@
  # ========================================================================
- # Script     =  script_23_06_A.rb
+ # Script     =  script_22_07.rb
  # ========================================================================
  # Description   =  "The script in accepting path as an argument, reads through file 
  #                   collects numeric values and returns average numbers
@@ -7,34 +7,34 @@
  # Email         =  "ThisIsPublicGit@nobody.com"
  # ========================================================================
 require 'optparse'
-require 'json'
-json_file = ""
+require 'csv'
  # OptionParser is a class for command-line option analysis
- OptionParser.new do |opts| # opts is var 
-  # Option one 
+OptionParser.new do |opts| # opts is var 
+  # Option one - File Path 
 	opts.on("-i", "--input") do
 		$file_name = ARGV[0]  # <<- GLOBAL ($) VAR a
-		 #puts ARGV[0]
 	end 
- end.parse!
- 
-	json_file = File.read($file_name)
-	#puts json_file #"Class Of JSON File.Read"
-	element = JSON.parse(json_file)
-	#puts element.class
+  # Option two - Row Number 	
+	opts.on("-r", "--row") do
+		$row_num = ARGV[0].to_i
+		#puts ARGV[0]
+	end
 
-	my_file_lines = []
-	my_file_lines = element.values.to_a
-
-	 # spin array to calculate the summary of all option	 
-	my_file_lines.each do |z|
-	    #puts z
-		$arg_sum = (z.to_f + $arg_sum.to_f)
-	 end
+end.parse!
+	sum = ""
+	$row_num = $row_num -1	
+	csv_file = CSV.read($file_name)
+	#puts csv_file[$row_num].class
+	# spin array to calculate the summary of all option	 
+	csv_file[$row_num].each do |z|
+	   # puts z
+		sum = sum.to_f + z.to_f
+	end
  # Get the number of options 
-	 num = my_file_lines.length
+	 num = csv_file[$row_num].length
  # calculate the average number 
-	 everage = $arg_sum/num
+	 everage = sum/num
+	 #puts everage
 	 #puts everage.class
  # print out the results 
-  puts "The everage of the following numbers is: #{my_file_lines.join(", ")} is #{everage}"
+  puts "The everage of the following numbers is: #{csv_file[$row_num].join(", ")} is #{everage}"
