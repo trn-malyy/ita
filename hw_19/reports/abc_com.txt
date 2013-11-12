@@ -1,0 +1,2 @@
+
+PASS: The file http://www.epinions.com/robots.txt exists with size 532.
