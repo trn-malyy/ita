@@ -1,0 +1,2 @@
+class KaduError < StandardError
+end

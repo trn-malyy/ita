@@ -1,0 +1,284 @@
+        <html>
+        <body><center>
+        <head><title>Epinions Post QA Test</title></head>
+        <h1 align='center'><a name="summary"><u>Epinions Post QA Test</u></a></h1><br/>
+      <table id="specifications" width="500px">
+        <tr><td><strong>Test Run Started On:</strong></td><td>2013-11-11 22:50:54 -0800</td></tr>
+        <tr><td><strong>Duration:</strong></td><td>57.0 secs</td></tr>
+      </table>
+      <br>
+          <table id="specifications" width="900px">
+          <tr>
+          <th >Epinions Server</th>
+          <th >Test Status</th>
+          </tr>
+          <tr>
+          <td><a href="http://www.epinions.com">http://www.epinions.com</a></td>
+          <td><font id=statuspass>PASS</font></td>
+          </tr>
+          </table>
+        <br>
+        <hr size=2 color="#000080">
+        <br/>
+        <h4>Detailed report for the last server in the list:  http://www.epinions.com</h4>
+        </center>
+        <br/>
+             <html>
+      <style>
+        body {background-color: #FFFFF0; font-family: "VAG Round" ; color : #000080;font-weight:normal;word-break: break-all;}
+        #specs-table{font-family:Arial,Helvetica,Sans-serif;font-size:12px;text-align:left;border-collapse:collapse;border-top: 2px solid #6678B1;border-bottom: 2px solid #6678B1;margin:20px;}
+        #specs-table th{font-size:13px;font-weight:normal;background:#b9c9fe;border-top:4px solid #aabcfe;border-bottom:1px solid #fff;color:#039;padding:8px;}
+        #specs-table td{background:#e8edff;border-top:1px solid #fff;border-bottom:1px solid #fff;color:#039;padding:8px;}
+        #specifications{font-family:Arial,Helvetica,Sans-serif;font-size:13px;width:480px;background:#fff;border-collapse:collapse;text-align:left;margin:20px;border:1px solid #ccc;}
+        #specifications th{font-size:14px;font-weight:bold;color:#039;border-bottom:2px solid #6678b1;padding:10px 8px;}
+        #specifications td{border-bottom:1px solid #ccc;color:#009;padding:6px 8px;}
+        #statuspass{font-family:Arial,Helvetica,Sans-serif;font-size:12px;color:green;font-weight:bold;}
+        #statusfail{font-family:Arial,Helvetica,Sans-serif;font-size:12px;color:red;font-weight:bold;}
+        #tcs{font-family:Arial,Helvetica,Sans-serif;font-size:13px;background:#fff;width:900px;border-collapse:collapse;text-align:left;margin:20px;border:1px solid #ccc;}
+        #tcs th{font-size:14px;font-weight:bold;color:#039;border-bottom:2px solid #6678b1;padding:10px 8px;}
+        #tcs td{border-bottom:1px solid #ccc;color:#009;padding:6px 8px;}
+        #checkpoint{font-family:Arial,Helvetica,Sans-serif;font-size:13px;background:#fff;width:900px;border-collapse:collapse;text-align:left;margin:20px;border:1px solid #ccc;}
+        #checkpoint td{border-bottom:1px solid #ccc;color:#009;padding:6px 8px;}
+        #container{margin: 0 30px;background: #fff;border:1px solid #ccc;}
+        #header{background: #e8edff;padding: 2px;border-bottom: 2px solid #6678b1;}
+        #steps{background: #e8edff;font-weight: bold;}
+        #dp{font-weight: bold;}
+        #validations{font-weight: bold;}
+        #content{clear: left;padding: 10px;}
+        #footer{background: #e8edff;text-align: right;padding: 10px;}
+      </style>
+    <head><title>Epinions Post QA Test</title></head>
+
+    <body>
+    <center>
+
+    <a name=Epinions-Post-QA-Test></a>
+    <table id="specifications">
+      <th align="center">Epinions Post QA Test</th>
+      <tr><td>Test specification: etc/test_specs/epinions_test_specs.json</td></tr>
+      <tr><td>Kadu server: http://www.epinions.com</td></tr>
+      <tr><td>Test suite started On: 2013-11-11 22:50:54 -0800</td></tr>
+      <tr><td>Duration: 57.0 secs</td></tr>
+      <tr><td>Test suite status: <font id=statuspass>PASS</font></td></tr>
+    </table>
+    <br>
+      <table id="tcs">
+        <tr>
+        <th >Test Case</th>
+        <th >Test Case Status</th>
+        </tr>
+        <tr>
+        <td><a href="#login_001">login_001: Login into the Epinions.com with invalid ID</a></td><td><font id=statuspass>PASS</font></td>
+        </tr>
+        <tr>
+        <td><a href="#login_002">login_002: Login into the Epinions.com with invalid Password</a></td><td><font id=statuspass>PASS</font></td>
+        </tr>
+        <tr>
+        <td><a href="#login_003">login_003: Login into the Epinions.com with valid credentials</a></td><td><font id=statuspass>PASS</font></td>
+        </tr>
+    </table>
+    <br>
+    <h4>Login in to the Epinions.com on all listed servers</h4>
+    <br>
+    </center>
+      <div id="container" style="word-break: break-all;width:100%;">
+      <div id="header">
+        <h4>
+          <p><a name="login_001">login_001: Login into the Epinions.com with invalid ID</a></p>
+          <p>Verify that on providing invalid ID, error message is displayed and the user is not logged in.</p>
+          <p>Test result status:  <font id=statuspass>PASS</font></p>
+        </h4>
+      </div>
+      <div id="content">
+      <h4>
+        Steps to reproduce
+      </h4>
+        <p id="steps">Step-01: Go to Epinions page</p>
+          <p id="dp">Dynamic Parameters</p>
+            <p>home_page = {"call open_home_page()"=>"Product Reviews and Consumer Reports | Epinions.com"}</p>
+            <p id="validations">
+              Validations
+            </p>
+            <table id="checkpoint">
+            <tr>
+              <td colspan="2" width="90%">
+              <p>Compare if the home page is displayed</p>
+              <p>(@ff.text.include?'Sign In').should == true, Compare if the home page is displayed == (@ff.text.include?'Sign In').should == true</p>
+              </td>
+              <td width="10%" rowspan="1" align="center"><font id=statuspass>PASS</font></td>
+            </tr>
+            </table>
+        <p id="steps">Step-02: Click on Sign In on the Epinions Home page</p>
+          <p id="dp">Dynamic Parameters</p>
+            <p>sign_in_page = {"call go_to_sign_in_page()"=>"Sign In Reviews and Products | Epinions.com"}</p>
+            <p id="validations">
+              Validations
+            </p>
+            <table id="checkpoint">
+            <tr>
+              <td colspan="2" width="90%">
+              <p>Compare if the login page is displayed</p>
+              <p>(@ff.text.include?'Already a member? Sign in.').should == true, Compare if the login page is displayed == (@ff.text.include?'Already a member? Sign in.').should == true</p>
+              </td>
+              <td width="10%" rowspan="1" align="center"><font id=statuspass>PASS</font></td>
+            </tr>
+            </table>
+        <p id="steps">Step-03: Provide user credentials, Sign in and validate.</p>
+          <p id="dp">Dynamic Parameters</p>
+            <p>test_type = {"set 'Invalid ID Login'"=>"Invalid ID Login"}</p>
+            <p>account_details = {"call get_test_user_details(@test_type)"=>"[{\"username\"=>\"qa20\", \"password\"=>\"testing\"}, {\"username\"=>\"qa22\", \"password\"=>\"testing\"}]"}</p>
+            <p id="validations">
+              Validations
+            </p>
+            <table id="checkpoint">
+            <tr>
+              <td colspan="2" width="90%">
+              <p>Check if invalid ID error message is displayed</p>
+              <p>Error message: Invalid ID displayed successfully, Check if invalid ID error message is displayed == validate_user_login_with_invalid_id(@account_details)</p>
+              </td>
+              <td width="10%" rowspan="1" align="center"><font id=statuspass>PASS</font></td>
+            </tr>
+            </table>
+      </div>
+      <div id="footer">
+        <a href="#Epinions-Post-QA-Test">back to test suite</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#summary">back to summary</a>
+	    </div>
+      </div>
+      <br>
+      <div id="container" style="word-break: break-all;width:100%;">
+      <div id="header">
+        <h4>
+          <p><a name="login_002">login_002: Login into the Epinions.com with invalid Password</a></p>
+          <p>Verify that on providing invalid Password, error message is displayed and the user is not logged in.</p>
+          <p>Test result status:  <font id=statuspass>PASS</font></p>
+        </h4>
+      </div>
+      <div id="content">
+      <h4>
+        Steps to reproduce
+      </h4>
+        <p id="steps">Step-01: Open the browser and go to Epinions page</p>
+          <p id="dp">Dynamic Parameters</p>
+            <p>home_page = {"call open_home_page()"=>"Product Reviews and Consumer Reports | Epinions.com"}</p>
+            <p id="validations">
+              Validations
+            </p>
+            <table id="checkpoint">
+            <tr>
+              <td colspan="2" width="90%">
+              <p>Compare if the home page is displayed</p>
+              <p>(@ff.text.include?'Sign In').should == true, Compare if the home page is displayed == (@ff.text.include?'Sign In').should == true</p>
+              </td>
+              <td width="10%" rowspan="1" align="center"><font id=statuspass>PASS</font></td>
+            </tr>
+            </table>
+        <p id="steps">Step-02: Click on Sign In on the Epinions Home page</p>
+          <p id="dp">Dynamic Parameters</p>
+            <p>sign_in_page = {"call go_to_sign_in_page()"=>"Sign In Reviews and Products | Epinions.com"}</p>
+            <p id="validations">
+              Validations
+            </p>
+            <table id="checkpoint">
+            <tr>
+              <td colspan="2" width="90%">
+              <p>Compare if the login page is displayed</p>
+              <p>(@ff.text.include?'Already a member? Sign in.').should == true, Compare if the login page is displayed == (@ff.text.include?'Already a member? Sign in.').should == true</p>
+              </td>
+              <td width="10%" rowspan="1" align="center"><font id=statuspass>PASS</font></td>
+            </tr>
+            </table>
+        <p id="steps">Step-03: Provide user credentials, Sign in and validate.</p>
+          <p id="dp">Dynamic Parameters</p>
+            <p>test_type = {"set 'Invalid Password Login'"=>"Invalid Password Login"}</p>
+            <p>account_details = {"call get_test_user_details(@test_type)"=>"[{\"username\"=>\"qa15\", \"password\"=>\"123test\"}]"}</p>
+            <p id="validations">
+              Validations
+            </p>
+            <table id="checkpoint">
+            <tr>
+              <td colspan="2" width="90%">
+              <p>Check if invalid password error message is displayed</p>
+              <p>Error message: Invalid Password displayed successfully, Check if invalid password error message is displayed == validate_user_login_with_invalid_password(@account_details)</p>
+              </td>
+              <td width="10%" rowspan="1" align="center"><font id=statuspass>PASS</font></td>
+            </tr>
+            </table>
+      </div>
+      <div id="footer">
+        <a href="#Epinions-Post-QA-Test">back to test suite</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#summary">back to summary</a>
+	    </div>
+      </div>
+      <br>
+      <div id="container" style="word-break: break-all;width:100%;">
+      <div id="header">
+        <h4>
+          <p><a name="login_003">login_003: Login into the Epinions.com with valid credentials</a></p>
+          <p>Verify if the user can login successfully</p>
+          <p>Test result status:  <font id=statuspass>PASS</font></p>
+        </h4>
+      </div>
+      <div id="content">
+      <h4>
+        Steps to reproduce
+      </h4>
+        <p id="steps">Step-01: Go to Epinions page</p>
+          <p id="dp">Dynamic Parameters</p>
+            <p>home_page = {"call open_home_page()"=>"Product Reviews and Consumer Reports | Epinions.com"}</p>
+            <p id="validations">
+              Validations
+            </p>
+            <table id="checkpoint">
+            <tr>
+              <td colspan="2" width="90%">
+              <p>Compare if the home page is displayed</p>
+              <p>(@ff.text.include?'Sign In').should == true, Compare if the home page is displayed == (@ff.text.include?'Sign In').should == true</p>
+              </td>
+              <td width="10%" rowspan="1" align="center"><font id=statuspass>PASS</font></td>
+            </tr>
+            </table>
+        <p id="steps">Step-02: Click on Sign In on the Epinions Home page</p>
+          <p id="dp">Dynamic Parameters</p>
+            <p>sign_in_page = {"call go_to_sign_in_page()"=>"Sign In Reviews and Products | Epinions.com"}</p>
+            <p id="validations">
+              Validations
+            </p>
+            <table id="checkpoint">
+            <tr>
+              <td colspan="2" width="90%">
+              <p>Compare if the login page is displayed</p>
+              <p>(@ff.text.include?'Already a member? Sign in.').should == true, Compare if the login page is displayed == (@ff.text.include?'Already a member? Sign in.').should == true</p>
+              </td>
+              <td width="10%" rowspan="1" align="center"><font id=statuspass>PASS</font></td>
+            </tr>
+            </table>
+        <p id="steps">Step-03: Provide user credentials, Sign in and validate.</p>
+          <p id="dp">Dynamic Parameters</p>
+            <p>test_type = {"set 'Valid Login'"=>"Valid Login"}</p>
+            <p>account_details = {"call get_test_user_details(@test_type)"=>"[{\"username\"=>\"trnmaly\", \"password\"=>\"epinions@01\"}, {\"username\"=>\"trnshopper\", \"password\"=>\"loveshopping@10\"}]"}</p>
+            <p id="validations">
+              Validations
+            </p>
+            <table id="checkpoint">
+            <tr>
+              <td colspan="2" width="90%">
+              <p>Check if user can login</p>
+              <p>User was successfully Logged In, Check if user can login == validate_user_sign_in(@account_details)</p>
+              </td>
+              <td width="10%" rowspan="1" align="center"><font id=statuspass>PASS</font></td>
+            </tr>
+            </table>
+      </div>
+      <div id="footer">
+        <a href="#Epinions-Post-QA-Test">back to test suite</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#summary">back to summary</a>
+	    </div>
+      </div>
+      <br>
+        <br>
+        <hr>
+        <br>
+      </body>
+      </html>
+
+
+        </body>
+        </html>

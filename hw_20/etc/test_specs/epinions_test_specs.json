@@ -1,0 +1,134 @@
+{
+"title" : "Epinions Post QA test – accounts migrations",
+"description" : "Login in to the Epinions.com on all listed servers",
+"test_cases" :
+{
+    "login_001" :
+    {
+        "title" : "Login into the Epinions.com with invalid ID",
+        "description" : "Verify that on providing invalid ID, error message is displayed and the user is not logged in.",
+        "test_steps" :
+        {
+            "Step-01: Go to Epinions page":
+            {
+                "dynamic_params" :
+                {
+                    "home_page" : "call open_home_page()"
+                },
+                "validation_steps":
+                {
+                    "Compare if the home page is displayed" : "(@ff.text.include?'Sign In').should == true"
+                }
+            },
+            "Step-02: Click on Sign In on the Epinions Home page":
+            {
+                "dynamic_params" :
+                {
+                    "sign_in_page" : "call go_to_sign_in_page()"
+                },
+                "validation_steps":
+                {
+                    "Compare if the login page is displayed" : "(@ff.text.include?'Already a member? Sign in.').should == true"
+                }
+            },
+            "Step-03: Provide user credentials, Sign in and validate.":
+            {
+                "dynamic_params" :
+                {
+                    "test_type" : "set 'Invalid ID Login'",
+                    "account_details" : "call get_test_user_details(@test_type)"
+                },
+                "validation_steps":
+                {
+                    "Check if invalid ID error message is displayed" : "validate_user_login_with_invalid_id(@account_details)"
+                }
+            }
+        }
+    },
+    "login_002" :
+    {
+        "title" : "Login into the Epinions.com with invalid Password",
+        "description" : "Verify that on providing invalid Password, error message is displayed and the user is not logged in.",
+        "test_steps" :
+        {
+            "Step-01: Open the browser and go to Epinions page":
+            {
+                "dynamic_params" :
+                {
+                    "home_page" : "call open_home_page()"
+                },
+                "validation_steps":
+                {
+                    "Compare if the home page is displayed" : "(@ff.text.include?'Sign In').should == true"
+                }
+            },
+            "Step-02: Click on Sign In on the Epinions Home page":
+            {
+                "dynamic_params" :
+                {
+                    "sign_in_page" : "call go_to_sign_in_page()"
+                },
+                "validation_steps":
+                {
+                    "Compare if the login page is displayed" : "(@ff.text.include?'Already a member? Sign in.').should == true"
+                }
+            },
+            "Step-03: Provide user credentials, Sign in and validate.":
+            {
+                "dynamic_params" :
+                {
+                    "test_type" : "set 'Invalid Password Login'",
+                    "account_details" : "call get_test_user_details(@test_type)"
+                },
+                "validation_steps":
+                {
+                    "Check if invalid password error message is displayed" : "validate_user_login_with_invalid_password(@account_details)"
+
+                }
+            }
+        }
+    },
+    "login_003" :
+    {
+        "title" : "Login into the Epinions.com with valid credentials",
+        "description" : "Verify if the user can login successfully",
+        "test_steps" :
+        {
+            "Step-01: Go to Epinions page":
+            {
+                "dynamic_params" :
+                {
+                    "home_page" : "call open_home_page()"
+                },
+                "validation_steps":
+                {
+                    "Compare if the home page is displayed" : "(@ff.text.include?'Sign In').should == true"
+                }
+            },
+            "Step-02: Click on Sign In on the Epinions Home page":
+            {
+                "dynamic_params" :
+                {
+                    "sign_in_page" : "call go_to_sign_in_page()"
+                },
+                "validation_steps":
+                {
+                    "Compare if the login page is displayed" : "(@ff.text.include?'Already a member? Sign in.').should == true"
+                }
+            },
+            "Step-03: Provide user credentials, Sign in and validate.":
+            {
+                "dynamic_params" :
+                {
+                    "test_type" : "set 'Valid Login'",
+                    "account_details" : "call get_test_user_details(@test_type)"
+                },
+                "validation_steps":
+                {
+                    "Check if user can login" : "validate_user_sign_in(@account_details)"
+                }
+            }
+        }
+    }
+}
+}
