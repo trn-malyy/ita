@@ -1,0 +1,74 @@
+
+FE Static Element Validation
+
+========================================================================================================================
+PAGE: 01 : http://www.shopping.com/
+========================================================================================================================
+
+Common Elements:
+________________________________________________________________________________________________________________________
+Element: 01 : <title>
+
+Validations:
+ PASS: Element exists and the occurrence count: 1
+ PASS: Element value exist and not NIL.
+------------------------------------------------------------------------------------------------------------------------
+Element: 02 : <meta>
+
+Validations:
+ PASS: Element exists and the occurrence count: 9
+------------------------------------------------------------------------------------------------------------------------
+Element: 03 : <input>
+
+Validations:
+ PASS: Element exists and the occurrence count: 4
+------------------------------------------------------------------------------------------------------------------------
+Element: 04 : <p>
+
+Validations:
+ PASS: Element exists and the occurrence count: 70
+------------------------------------------------------------------------------------------------------------------------
+Element: 05 : <meta>
+
+Validations:
+ PASS: Element exists and the occurrence count: 9
+
+ Attribute: 01 : content
+
+  PASS: The attribute 'content' exist.
+  PASS: attribute 'content' value exist and not NIL.
+------------------------------------------------------------------------------------------------------------------------
+Element: 06 : <input>
+
+Validations:
+ PASS: Element exists and the occurrence count: 4
+
+ Attribute: 01 : type
+
+  PASS: The attribute 'type' exist.
+  PASS: attribute 'type' value exist and not NIL.
+------------------------------------------------------------------------------------------------------------------------
+
+Home Page Elements:
+________________________________________________________________________________________________________________________
+Element: 51 : <input>
+
+Validations:
+ PASS: Element exists and the occurrence count: 4
+
+ Attribute: 01 : value
+
+  PASS: The attribute 'value' exist.
+  PASS: Attribute 'value' value matches the expected value.
+
+ Attribute: 02 : id
+
+  PASS: The attribute 'id' exist.
+  PASS: Attribute 'id' value matches the expected value.
+------------------------------------------------------------------------------------------------------------------------
+========================================================================================================================
+PAGE: 02 : http://www.shopping.com//xCH-cameras_and_photography
+========================================================================================================================
+
+BLOCK: 404 => Net::HTTPNotFound for http://www.shopping.com//xCH-cameras_and_photography -- unhandled response
+

@@ -1,0 +1,69 @@
+{
+"elements":
+    [
+        {
+            "element_id" : "01",
+            "element_type" : "html",
+            "element_name" : "title",
+            "element_value" : "*",
+            "selector" : "",
+            "selector_value " : ""
+        },
+        {
+            "element_id" : "02",
+            "element_type" : "html",
+            "element_name" : "meta",
+            "element_value" : "",
+            "selector": "",
+            "selector_value " : ""
+        },
+        {
+            "element_id" : "03",
+            "element_type" : "input",
+            "element_name" : "input",
+            "element_value" : "",
+            "selector" : "id",
+            "selector_value " : "searchBarTxtField"
+        },
+        {
+            "element_id" : "04",
+            "element_type" : "text",
+            "element_name": "p",
+            "element_value" : "",
+            "selector": "*",
+            "selector_value" : "*"
+        },
+        {
+            "element_id" : "05",
+            "element_type" : "html",
+            "element_name" : "meta",
+            "element_value" : "",
+            "selector" : "",
+            "selector_value" : "",
+            "attributes" :
+            [
+                {
+                    "attribute_id"         :  "01",
+                    "attribute_name"  :  "content",
+                    "attribute_value"   :  "*"
+                }
+            ]
+        },
+        {
+            "element_id" : "06",
+            "element_type" : "input",
+            "element_name" : "input",
+            "element_value" : "",
+            "selector" : "",
+            "selector_value" : "",
+            "attributes" :
+            [
+                {
+                    "attribute_id" :  "01",
+                    "attribute_name"  :  "type",
+                    "attribute_value"   :  "*"
+                }
+            ]
+        }
+    ]
+}

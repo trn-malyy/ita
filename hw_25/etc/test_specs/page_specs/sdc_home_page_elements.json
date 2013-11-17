@@ -1,0 +1,27 @@
+{
+"elements":
+    [
+        {
+            "element_id" : "51",
+            "element_name" : "input",
+            "element_type" : "INPUT",
+            "element_value" : "",
+            "selector" : "",
+            "selector_value" : "",
+            "attributes" :
+            [
+                {
+                    "attribute_id" : "01",
+                    "attribute_name" : "value",
+                    "attribute_value" : "What are you shopping for?"
+                },
+                {
+                    "attribute_id" : "02",
+                    "attribute_name" : "id",
+                    "attribute_value" : "searchBarTxtField"
+                }
+            ]
+        }
+    ]
+}
+
